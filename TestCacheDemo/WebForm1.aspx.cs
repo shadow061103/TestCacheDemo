@@ -15,7 +15,9 @@ namespace TestCacheDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            policy.AbsoluteExpiration = DateTime.Now.AddMinutes(3);
+            policy.AbsoluteExpiration = DateTime.Now.AddMinutes(1);//指定時間
+            //policy.SlidingExpiration = TimeSpan.FromMinutes(1);//一段時間沒用就回收
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -26,7 +28,8 @@ namespace TestCacheDemo
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            //清cache
+            cache.Remove("PersonData");
         }
 
         protected void Button3_Click(object sender, EventArgs e)

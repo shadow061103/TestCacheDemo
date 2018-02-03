@@ -28,7 +28,7 @@ namespace CacheDataWcf
             list.Add(new Person() { Name = "Batista", Job = "Student" });
             list.Add(new Person() { Name = "Big Show", Job = "Engineer" });
 
-            Thread.Sleep(10000);
+            Thread.Sleep(5000);
             return list;
         }
     }
